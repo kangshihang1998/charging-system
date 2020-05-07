@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2CA64122-526E-4AB5-87BA-89A0D9A08E47}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivateCardDAL.cs" />
+    <Compile Include="ActivateOpertionDAL.cs" />
+    <Compile Include="AddandDeleteUserDAL.cs" />
+    <Compile Include="BasitDateDAL.cs" />
+    <Compile Include="CancelCardDAL.cs" />
+    <Compile Include="GroupQuerDAL.cs" />
+    <Compile Include="LineStudentDAL.cs" />
+    <Compile Include="LoginDal.cs" />
+    <Compile Include="LoginOutMangerDAL.cs" />
+    <Compile Include="LoginOutStudentDAL.cs" />
+    <Compile Include="ManIDcardnoDAL.cs" />
+    <Compile Include="OnLineStudentDAL.cs" />
+    <Compile Include="OnManWorkDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryCashDAL.cs" />
+    <Compile Include="RechargeCashDAL.cs" />
+    <Compile Include="RechargeDAL.cs" />
+    <Compile Include="RegistrationCardnoDAL.cs" />
+    <Compile Include="RestUserInfoPwdDAL.cs" />
+    <Compile Include="returnCashDAL.cs" />
+    <Compile Include="SelectRechargeDAL.cs" />
+    <Compile Include="SettleAccountsDAL.cs" />
+    <Compile Include="SQLHelper.cs" />
+    <Compile Include="StudentInfoDAL.cs" />
+    <Compile Include="StudentOnLineStateDAL.cs" />
+    <Compile Include="StudentPwdOpertionDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Enitity\Enitity.csproj">
+      <Project>{96cf5d27-c9c8-4d00-a943-79566e7ef0db}</Project>
+      <Name>Enitity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Project>{93927b41-a37f-4d3e-8da0-d0b42180c89c}</Project>
+      <Name>IDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
