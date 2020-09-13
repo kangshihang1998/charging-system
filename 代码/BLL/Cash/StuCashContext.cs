@@ -43,8 +43,9 @@ namespace BLL.Cash
         public double GetResult(string TimeSolt,double LimtTime)
         {
             
-            DateTime MintDateTime=DateTime.Parse(TimeSolt);//转换为DateTime类型
-            int Mint = MintDateTime.Minute;//时间长转换为分钟
+           string hour = TimeSolt.Substring(0,2);//获取上机几小时
+            string min = TimeSolt.Substring(3,2);//获取上机几分钟
+            int Mint =(int.Parse(hour)*60)+int.Parse(min);//合并小时和时间，获取总的上机分钟数。
             //返回计算结果
             return cs.GetConsumeMoney(Mint,LimtTime);
         }
